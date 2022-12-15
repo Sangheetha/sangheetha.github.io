@@ -8,32 +8,17 @@ date:   2022-12-13 02:04:50 -0500
 Click the image to explore the map. 
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
-**TL;DR:** Explore a [map](/Intro501) of areas covered by [Intro 501](https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=5669096&GUID=13B0175F-8FD2-4728-9734-2ACEB6D2DC5C&Options=Advanced&Search=)
+[Intro 501](https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=5669096&GUID=13B0175F-8FD2-4728-9734-2ACEB6D2DC5C&Options=Advanced&Search=) is a bill in the New York City Council that would allow people to report the obstruction of a bike lane/bus lane/etc by a vehicle, and creates a new civil penalty of a $175 ticket for that offense. However, it would only apply to vehicles within 1320 feet of a school building.
 
-Int 501 20222 blah blah blah was a bill introduced this year to blah blah blah. 
+I made an [interactive map](/Intro501) of the relevant areas.
 
 <!--more-->
 
-Github repo for project:
+The map was made using [geopandas](https://geopandas.org). More details are in the [Github repository](https://github.com/Sangheetha/Intro501). School locations were taken from the [2019-2020 data](https://data.cityofnewyork.us/Education/2019-2020-School-Locations/wg9x-4ke6) on the NYC OpenData site, the latest year that I could find.
 
-Datasets used:
+A few notes:
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+* The covered area is ~258km<sup>2</sup> (99 square miles), about 32% of NYC's landmass. A follow-up question on my mind is what proportion of NYC streets or even specifically bike lanes are covered.  
+* There's a [school](https://en.wikipedia.org/wiki/New_York_Harbor_School) on Governor's Island!
+* I certainly didn't have a mental model of the distribution of schools across the city until I worked on this - an initial plan to also display the individual school locations on this map was scuffed because of the sheer noise the highest density areas would have added.
 
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
