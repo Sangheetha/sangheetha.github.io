@@ -20,6 +20,11 @@
               </a>
             {% endif %}
         {% endfor %} 
+        <a href="mailto:{{ email }}">
+          <svg class="svg-icon">
+            <use xlink:href="{{ 'assets/minima-social-icons.svg#email' | relative_url }}"></use>
+          </svg>
+        </a>
     </div>
   </div>
 
